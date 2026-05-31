@@ -2,9 +2,14 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "deploy": "npm run docs:build && wrangler deploy",
+    "preview": "npm run docs:build && wrangler dev"
   },
   "dependencies": {
     "vitepress": "^2.0.0-alpha.17"
+  },
+  "devDependencies": {
+    "wrangler": "^4.95.0"
   }
 }
